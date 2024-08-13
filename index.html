@@ -7,6 +7,18 @@
     <title>TG init-data</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+         body {
+            --bg-color: var(--tg-theme-bg-color, #fff);
+            font-family: sans-serif;
+            background-color: var(--bg-color);
+            color: var(--tg-theme-text-color, #222);
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            color-scheme: var(--tg-color-scheme);
+        }
+    </style>
 </head>
 
 <body>
@@ -20,7 +32,6 @@
         var WebApp = window.Telegram.WebApp;
         const elem = document.getElementById("init-data-text");
         WebApp.ready()
-        WebApp.showAlert(`Добро пожаловать, @${WebApp.initDataUnsafe.user.username}.`);
         if (WebApp.initData) {
             elem.textContent = WebApp.initData;
         } else {
