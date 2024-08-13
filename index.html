@@ -13,7 +13,7 @@
 </body>
 <script>
     const elem = document.getElementById("init-data-text");
-    if(window.Telegram.WebApp) {
+    if(window.Telegram?.WebApp?.initData) {
         elem.textContent = initData
     } else {
         elem.textContent = "Unavailable!"
