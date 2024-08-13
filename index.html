@@ -13,18 +13,16 @@
             font-family: sans-serif;
             background-color: var(--bg-color);
             color: var(--tg-theme-text-color, #222);
-            font-size: 14px;
-            margin: 0;
-            padding: 0;
             color-scheme: var(--tg-color-scheme);
         }
     </style>
 </head>
 
 <body>
-    <p style="font-size: large">
-        Telegram init-data: <span id="init-data-text"></span>
+    <p style="font-size: 20px">
+        Telegram init-data:
     </p>
+    <p id="init-data-text" style="overflow-wrap: break-word;"></p>
     <button onclick="setInitData()">Refresh</button> 
 </body>
 <script type="application/javascript">
