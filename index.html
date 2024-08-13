@@ -7,7 +7,7 @@
     <title>TG init-data</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js?2"></script>
 </head>
 
 <body>
@@ -19,7 +19,8 @@
 <script>
     function setInitData() {
         const elem = document.getElementById("init-data-text");
-        if (window.Telegram?.WebApp?.initData) {
+        window.Telegram.WebApp.ready()
+        if (window.Telegram.WebApp.initData) {
             elem.textContent = initData;
         } else {
             console.log('No init-data')
@@ -28,5 +29,4 @@
     }
     setInitData();
 </script>
-
 </html>
