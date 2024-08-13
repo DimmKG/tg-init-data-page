@@ -20,7 +20,7 @@
         var WebApp = window.Telegram.WebApp;
         const elem = document.getElementById("init-data-text");
         WebApp.ready()
-        WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
+        WebApp.showAlert(`Добро пожаловать, @${WebApp.initDataUnsafe.user.username}.`);
         if (WebApp.initData) {
             elem.textContent = WebApp.initData;
         } else {
